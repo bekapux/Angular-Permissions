@@ -1,5 +1,0 @@
-export class PermissionsConstants {
-  readonly POST_CREATE = "create-post";
-  readonly POST_DELETE = "delete-post";
-  readonly POST_UPDATE = "update-post";
-}

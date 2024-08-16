@@ -13,7 +13,7 @@ export class AuthService {
   private http = inject(HttpClient);
   private permissions = signal<string[]>([]);
   private user = signal<User | null>(null);
-  public isAuthenticated = computed(() => this.user() !== null);
+  public isAuthenticated = computed<boolean>(() => this.user() !== null);
 
   public authenticate(authRequest: AuthRequest): Observable<AuthResponse> {
     return this.http
