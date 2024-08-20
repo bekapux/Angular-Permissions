@@ -26,21 +26,21 @@
       <button
         type="button"
         class="btn btn-primary"
-        *ifHasPermission="permissions.POST_CREATE"
+        *ifHasPermission="to.CREATE_POST"
       >
         Create Post
       </button>
       <button
         type="button"
         class="btn btn-danger"
-        *ifHasPermission="permissions.POST_UPDATE"
+        *ifHasPermission="to.UPDATE_POST"
       >
         Update Post
       </button>
       <button
         type="button"
         class="btn btn-secondary"
-        *ifHasPermission="permissions.POST_DELETE"
+        *ifHasPermission="to.DELETE_POST"
       >
         Delete Post
       </button>

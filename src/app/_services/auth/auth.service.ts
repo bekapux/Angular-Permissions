@@ -11,7 +11,7 @@ import { User } from '../../_models/user.model';
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private permissions = signal<string[]>([]);
+  private permissions = signal<string[]>(['create-post']);
   private user = signal<User | null>(null);
   public isAuthenticated = computed<boolean>(() => this.user() !== null);
 
@@ -60,7 +60,7 @@ export class AuthService {
 }
 
 export enum PermissionsEnum {
-  POST_CREATE = 'create-post',
-  POST_DELETE = 'delete-post',
-  POST_UPDATE = 'update-post',
+  CREATE_POST = 'create-post',
+  DELETE_POST = 'delete-post',
+  UPDATE_POST = 'update-post',
 }

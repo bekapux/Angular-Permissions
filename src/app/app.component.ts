@@ -19,7 +19,7 @@ import { AuthService, PermissionsEnum } from './_services/auth/auth.service';
 })
 export class AppComponent {
   public authService = inject(AuthService);
-  public permissions = PermissionsEnum;
+  public to = PermissionsEnum;
 
   public addPermissionForm = new FormGroup({
     permissionName: new FormControl('', Validators.required),
